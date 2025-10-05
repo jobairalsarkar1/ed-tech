@@ -21,5 +21,4 @@ export default ({ env }) => ({
     nps: env.bool('FLAG_NPS', true),
     promoteEE: env.bool('FLAG_PROMOTE_EE', true),
   },
-  url: env('STRAPI_ADMIN_BACKEND_URL', 'https://ed-tech-production.up.railway.app/admin'),
 });
