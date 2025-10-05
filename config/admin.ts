@@ -2,9 +2,8 @@ export default ({ env }) => ({
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
     session: {
-      // Allow admin cookies over non-HTTPS connections
-      sameSite: 'None', // Required for cross-site cookies in browsers
-      secure: false,    // Disable HTTPS-only restriction (for Railway preview)
+      sameSite: 'None',
+      secure: false,
     },
   },
   apiToken: {
