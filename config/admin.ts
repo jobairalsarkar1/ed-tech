@@ -3,7 +3,7 @@ export default ({ env }) => ({
     secret: env('ADMIN_JWT_SECRET'),
     session: {
       sameSite: 'None',
-      secure: false,
+      secure: true,
     },
   },
   apiToken: {
