@@ -44,6 +44,12 @@
     },
     "isPublished": {
       "type": "boolean"
+    },
+    "module": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::module.module",
+      "mappedBy": "course"
     }
   }
 }
