@@ -1,6 +1,11 @@
 export default ({ env }) => ({
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
+    session: {
+      // Allow admin cookies over non-HTTPS connections
+      sameSite: 'None', // Required for cross-site cookies in browsers
+      secure: false,    // Disable HTTPS-only restriction (for Railway preview)
+    },
   },
   apiToken: {
     salt: env('API_TOKEN_SALT'),
